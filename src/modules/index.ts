@@ -1,13 +1,13 @@
 import { loadFilesSync } from '@graphql-tools/load-files';
 import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 
-import AlbumsResolver from './albums/resolvers';
-import ArtistsResolver from './artists/resolvers';
-import BandsResolver from './bands/resolvers';
-import FavoritesResolver from './favourites/resolvers';
-import GenresResolver from './genres/resolvers';
-import TracksResolver from './tracks/resolvers';
-import UsersResolver from './users/resolvers';
+import { AlbumsResolver } from './albums';
+import { ArtistsResolver } from './artists';
+import { BandsResolver } from './bands';
+import { FavoritesResolver } from './favourites';
+import { GenresResolver } from './genres';
+import { TracksResolver } from './tracks';
+import { UsersResolver } from './users';
 
 export const resolvers = mergeResolvers([
   AlbumsResolver,
