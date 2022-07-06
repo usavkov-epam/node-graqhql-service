@@ -1,16 +1,16 @@
-import { loadFiles } from '@graphql-tools/load-files';
 import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
 import http from 'http';
 
+import { resolvers, typeDefs } from './src/modules';
+
 async function startApolloServer() {
   const app = express();
   const httpServer = http.createServer(app);
-  const typeDefs = await loadFiles('src/**/*.graphql');
 
   const server = new ApolloServer({
     typeDefs,
-    resolvers: [],
+    resolvers,
     csrfPrevention: true,
     cache: 'bounded',
   });
