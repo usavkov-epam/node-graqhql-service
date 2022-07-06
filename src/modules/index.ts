@@ -20,6 +20,3 @@ export const resolvers = mergeResolvers([
 ]);
 
 export const typeDefs = mergeTypeDefs(loadFilesSync('src/**/*.graphql'));
-
-console.log(typeDefs);
-
