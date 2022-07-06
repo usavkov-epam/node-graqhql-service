@@ -1,0 +1,9 @@
+{
+  "name": "node-qraphql",
+  "version": "1.0.0",
+  "description": "GraphQL service on Node.js",
+  "main": "index.ts",
+  "repository": "https://github.com/usavkov-epam/node-qraphql.git",
+  "author": "Yury Saukou <yury_saukou@epam.com>",
+  "license": "MIT"
+}

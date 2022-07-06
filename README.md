@@ -1,1 +1,1 @@
-# node-graqhql-service
+# Graphql Service
