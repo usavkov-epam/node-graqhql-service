@@ -2,7 +2,7 @@ import { loadFilesSync } from '@graphql-tools/load-files';
 import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 
 import { AlbumsAPI, AlbumsResolver } from './albums';
-import { ArtistsResolver } from './artists';
+import { ArtistsAPI, ArtistsResolver } from './artists';
 import { BandsResolver } from './bands';
 import { FavoritesResolver } from './favourites';
 import { GenresResolver } from './genres';
@@ -23,4 +23,5 @@ export const typeDefs = mergeTypeDefs(loadFilesSync('src/**/*.graphql'));
 
 export const dataSources = () => ({
   albumsAPI: new AlbumsAPI(),
+  artistsAPI: new ArtistsAPI(),
 })
