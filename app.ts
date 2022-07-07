@@ -5,9 +5,12 @@ import http from 'http';
 import 'dotenv/config';
 
 import {
+  dataSources,
   resolvers,
   typeDefs,
 } from './src/modules';
+
+import { AlbumsAPI } from './src/modules/albums';
 
 const PORT = process.env.PORT || 4000;
 
@@ -18,6 +21,7 @@ async function startApolloServer() {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
+    dataSources,
     csrfPrevention: true,
     cache: 'bounded',
   });

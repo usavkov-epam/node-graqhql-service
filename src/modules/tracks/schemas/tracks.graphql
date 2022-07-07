@@ -1,7 +1,14 @@
-type User {
+type Track {
   id: ID!
-  firstName: String
-  secondName: String
-  password: String
-  email: String!
+  title: String!
+  album: Album
+  artists: [Artist]
+  bands: [Band]
+  duration: Int
+  released: Int
+  genres: [Genre]
+}
+
+type Query {
+  tracks: [Track]
 }

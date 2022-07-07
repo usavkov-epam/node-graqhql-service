@@ -1,5 +1,5 @@
 export default {
   Query: {
-    albums: () => {}
+    users: () => {}
   }
 };
