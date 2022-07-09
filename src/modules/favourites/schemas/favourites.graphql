@@ -8,5 +8,5 @@ type Favourites {
 }
 
 type Query {
-  favorites(userId: ID!): Favourites
+  favorites: Favourites
 }

@@ -24,6 +24,9 @@ async function startApolloServer() {
     dataSources,
     csrfPrevention: true,
     cache: 'bounded',
+    context: ({ req }) => ({
+      token: req.headers.authorization,
+    }),
   });
 
   await server.start();
