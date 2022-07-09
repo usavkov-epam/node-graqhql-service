@@ -6,7 +6,7 @@ import { ArtistsAPI, ArtistsResolver } from './artists';
 import { BandsAPI, BandsResolver } from './bands';
 import { FavoritesAPI, FavoritesResolver } from './favourites';
 import { GenresAPI, GenresResolver } from './genres';
-import { TracksResolver } from './tracks';
+import { TracksAPI, TracksResolver } from './tracks';
 import { UsersResolver } from './users';
 
 export const resolvers = mergeResolvers([
@@ -27,4 +27,5 @@ export const dataSources = () => ({
   bandsAPI: new BandsAPI(),
   favoritesAPI: new FavoritesAPI(),
   genresAPI: new GenresAPI(),
+  tracksAPI: new TracksAPI(),
 })
