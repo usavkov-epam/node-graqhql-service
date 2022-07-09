@@ -1,9 +1,17 @@
 export const getAllArtists = ({ artistsAPI }) => async (searchParams) => {
-  return artistsAPI.getAll(searchParams);
+  const artists = await artistsAPI.getAll(searchParams);
+  return {
+    ...artists,
+    items: artists.items.map(artist => ({ ...artist, id: artist._id }))
+  };
 }
 
 export const getArtistById = ({ artistsAPI }) => async (id: string) => {
-  return artistsAPI.getById(id);
+  const artist = await artistsAPI.getById(id);
+  return {
+    ...artist,
+    id: artist._id,
+  };
 }
 
 export default {

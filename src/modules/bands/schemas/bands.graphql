@@ -15,5 +15,5 @@ type Member {
 
 type Query {
   band(id: ID!): Band
-  bands: [Band]
+  bands(limit: Int, offset: Int): [Band]
 }

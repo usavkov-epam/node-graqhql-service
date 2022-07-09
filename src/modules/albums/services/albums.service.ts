@@ -1,5 +1,9 @@
 const getAllAlbums = ({ albumsAPI }) => async (searchParams) => {
-  return albumsAPI.getAll(searchParams)
+  const albums = await albumsAPI.getAll(searchParams);
+  return {
+    ...albums,
+    items: albums.items.map(album => ({ ...album, id: album._id })),
+  };
 };
 
 const getAlbumById = ({ albumsAPI }) => async (id) => {

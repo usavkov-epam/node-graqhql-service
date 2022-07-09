@@ -1,6 +1,5 @@
+import Query from './queries';
+
 export default {
-  Query: {
-    band: () => {},
-    bands: () => {},
-  }
+  Query,
 };
