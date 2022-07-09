@@ -5,7 +5,7 @@ import { AlbumsAPI, AlbumsResolver } from './albums';
 import { ArtistsAPI, ArtistsResolver } from './artists';
 import { BandsAPI, BandsResolver } from './bands';
 import { FavoritesAPI, FavoritesResolver } from './favourites';
-import { GenresResolver } from './genres';
+import { GenresAPI, GenresResolver } from './genres';
 import { TracksResolver } from './tracks';
 import { UsersResolver } from './users';
 
@@ -26,4 +26,5 @@ export const dataSources = () => ({
   artistsAPI: new ArtistsAPI(),
   bandsAPI: new BandsAPI(),
   favoritesAPI: new FavoritesAPI(),
+  genresAPI: new GenresAPI(),
 })

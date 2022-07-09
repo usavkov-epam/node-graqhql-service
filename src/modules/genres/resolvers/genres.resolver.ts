@@ -1,6 +1,5 @@
+import Query from './queries';
+
 export default {
-  Query: {
-    genre: () => {},
-    genres: () => {}
-  }
+  Query,
 };
