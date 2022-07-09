@@ -1,5 +1,5 @@
+import Query from './queries';
+
 export default {
-  Query: {
-    users: () => {}
-  }
+  Query,
 };

@@ -7,7 +7,9 @@ import { BandsAPI, BandsResolver } from './bands';
 import { FavoritesAPI, FavoritesResolver } from './favourites';
 import { GenresAPI, GenresResolver } from './genres';
 import { TracksAPI, TracksResolver } from './tracks';
-import { UsersResolver } from './users';
+import { UsersAPI, UsersResolver } from './users';
+
+export const typeDefs = mergeTypeDefs(loadFilesSync('src/**/*.graphql'));
 
 export const resolvers = mergeResolvers([
   AlbumsResolver,
@@ -19,8 +21,6 @@ export const resolvers = mergeResolvers([
   UsersResolver,
 ]);
 
-export const typeDefs = mergeTypeDefs(loadFilesSync('src/**/*.graphql'));
-
 export const dataSources = () => ({
   albumsAPI: new AlbumsAPI(),
   artistsAPI: new ArtistsAPI(),
@@ -28,4 +28,5 @@ export const dataSources = () => ({
   favoritesAPI: new FavoritesAPI(),
   genresAPI: new GenresAPI(),
   tracksAPI: new TracksAPI(),
+  usersAPI: new UsersAPI(),
 })
