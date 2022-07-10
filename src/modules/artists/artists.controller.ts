@@ -18,4 +18,29 @@ export class ArtistsAPI extends RESTDataSource {
   async getById(id: string) {
     return this.get(`v1/artists/${id}`);
   }
+
+  
+  async create(body) {
+    return this.post(`v1/artists`, body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async update({ id, data }) {
+    return this.put(`v1/artists/${id}`, data, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async deleteItem(id: string) {
+    return this.delete(`v1/artists/${id}`, {}, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
 }
