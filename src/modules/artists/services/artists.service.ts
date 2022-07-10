@@ -36,7 +36,6 @@ const deleteArtist = ({ artistsAPI }) => async (id: string) => {
   return artistsAPI.deleteItem(id);
 };
 
-
 export default {
   createNewArtist,
   deleteArtist,

@@ -19,7 +19,6 @@ export class ArtistsAPI extends RESTDataSource {
     return this.get(`v1/artists/${id}`);
   }
 
-  
   async create(body) {
     return this.post(`v1/artists`, body, {
       headers: {

@@ -5,5 +5,5 @@ import { updateArtist } from './updateArtist';
 export default {
   createArtist,
   deleteArtist,
-  updateArtist,
+  updateArtist, 
 };
