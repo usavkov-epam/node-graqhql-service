@@ -1,0 +1,1 @@
+export { resolveRelated } from './resolveRelated';
