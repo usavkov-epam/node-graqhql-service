@@ -18,4 +18,28 @@ export class AlbumsAPI extends RESTDataSource {
   async getById(id: string) {
     return this.get(`v1/albums/${id}`);
   }
+
+  async create(body) {
+    return this.post(`v1/albums`, body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async update({ id, data }) {
+    return this.put(`v1/albums/${id}`, data, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async deleteItem(id: string) {
+    return this.delete(`v1/albums/${id}`, {}, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
 }
