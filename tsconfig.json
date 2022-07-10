@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "target": "esNext",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./build",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,

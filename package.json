@@ -7,6 +7,7 @@
   "author": "Yury Saukou <yury_saukou@epam.com>",
   "license": "MIT",
   "scripts": {
+    "start": "npx cross-env NODE_ENV=production tsc && node ./build/app.js",
     "start:dev": "npx nodemon --exec ts-node app.ts"
   },
   "devDependencies": {
