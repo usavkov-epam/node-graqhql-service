@@ -18,4 +18,8 @@ export class UsersAPI extends RESTDataSource {
   async login(body) {
     return this.post(`v1/users/login`, body);
   }
+
+  async register(body) {
+    return this.post(`v1/users/register`, body);
+  }
 }

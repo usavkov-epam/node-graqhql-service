@@ -6,6 +6,17 @@ type User {
   email: String!
 }
 
+input UserInput {
+  firstName: String!
+  secondName: String!
+  password: String!
+  email: String!
+  favouriteArtistsIds: [String]
+  favouriteSongsIds: [String]
+  favouriteBandsIds: [String]
+  favouriteGenresIds: [String]
+}
+
 type JWT {
   jwt: String
 }
@@ -13,4 +24,8 @@ type JWT {
 type Query {
   user(id: ID!): User
   jwt(email: String!, password: String!): JWT
+}
+
+type Mutation {
+  register(data: UserInput!): User
 }
