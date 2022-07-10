@@ -16,7 +16,32 @@ export const getGenreById = ({ genresAPI }) => async (id: string) => {
   };
 }
 
+const createNewGenre = ({ genresAPI }) => async (data) => {
+  const genre = await genresAPI.create(data);
+
+  return {
+    ...genre,
+    id: genre._id,
+  };
+};
+
+const updateGenre = ({ genresAPI }) => async (data) => {
+  const genre = await genresAPI.update(data);
+
+  return {
+    ...genre,
+    id: genre._id,
+  };
+};
+
+const deleteGenre = ({ genresAPI }) => async (id: string) => {
+  return genresAPI.deleteItem(id);
+};
+
 export default {
+  createNewGenre,
+  deleteGenre,
   getAllGenres,
   getGenreById,
+  updateGenre,
 };

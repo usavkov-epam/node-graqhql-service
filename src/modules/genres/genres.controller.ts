@@ -18,4 +18,28 @@ export class GenresAPI extends RESTDataSource {
   async getById(id: string) {
     return this.get(`v1/genres/${id}`);
   }
+
+  async create(body) {
+    return this.post(`v1/genres`, body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async update({ id, data }) {
+    return this.put(`v1/genres/${id}`, data, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async deleteItem(id: string) {
+    return this.delete(`v1/genres/${id}`, {}, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
 }
