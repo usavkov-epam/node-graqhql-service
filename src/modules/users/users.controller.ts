@@ -19,6 +19,14 @@ export class UsersAPI extends RESTDataSource {
     return this.post(`v1/users/login`, body);
   }
 
+  async verify(body) {
+    return this.post(`v1/users/login`, body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
   async register(body) {
     return this.post(`v1/users/register`, body);
   }

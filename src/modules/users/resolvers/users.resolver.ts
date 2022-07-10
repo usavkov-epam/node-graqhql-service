@@ -6,5 +6,6 @@ export default {
   Query,
   User: {
     id: ({ _id }) => _id,
+    secondName: ({ lastName }) => lastName,
   }
 };

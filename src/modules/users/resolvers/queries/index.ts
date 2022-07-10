@@ -1,7 +1,9 @@
 import { getUser } from './getUser';
 import { login } from './login';
+import { verify } from './verify';
 
 export default {
-  user: getUser,
   jwt: login,
+  user: getUser,
+  verify,
 };
