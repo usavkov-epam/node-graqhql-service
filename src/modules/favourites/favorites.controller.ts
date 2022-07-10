@@ -18,4 +18,20 @@ export class FavoritesAPI extends RESTDataSource {
       },
     });
   }
+
+  async add(body) {
+    return this.put('v1/favourites/add', body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
+
+  async remove(body) {
+    return this.put('v1/favourites/remove', body, {
+      headers: {
+        authorization: this.context.token,
+      },
+    });
+  }
 }
