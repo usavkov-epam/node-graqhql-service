@@ -20,7 +20,7 @@ export class UsersAPI extends RESTDataSource {
   }
 
   async verify(body) {
-    return this.post(`v1/users/login`, body, {
+    return this.post(`v1/users/verify`, body, {
       headers: {
         authorization: this.context.token,
       },
